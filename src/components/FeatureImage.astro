@@ -1,0 +1,44 @@
+---
+export interface Props {
+  title?: string;
+  body?: string;
+  href?: string;
+}
+
+const { href, title, body } = Astro.props;
+---
+
+<div class="group">
+  <div
+    class="relative isolate aspect-square w-[100%] max-w-[500px] skew-y-3 overflow-hidden rounded-lg transition-all ease-out group-hover:scale-90 group-hover:rounded-[50%] md:w-[350px] lg:w-[40vw]"
+  >
+    <img
+      src="/portfolio-foreground.png"
+      class="foreground-image absolute bottom-[-30%] z-[1] animate-[fade-in_1s_ease-in-out] transition-all duration-700 ease-out group-hover:translate-x-[20%] group-hover:scale-[.8]"
+    />
+    <div
+      class="absolute z-0 h-full w-full bg-white/30 opacity-0 backdrop-blur-md duration-1000 group-hover:opacity-[1]"
+    >
+    </div>
+    <img
+      src="/portfolio-background.png"
+      class="absolute bottom-[-30%] z-[-1] opacity-[.8]"
+    />
+  </div>
+</div>
+
+<style>
+  .clip-path-custom {
+    clip-path: url(#customClip);
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.7) translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0%);
+    }
+  }
+</style>

@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import FeatureImage from "../components/FeatureImage.astro";
+import Wave from "../components/Wave.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="bg-gradient-to-r from-rose-100 to-teal-100">
+    <section
+      class="relative z-10 grid min-h-screen grid-cols-1 content-center items-center justify-center justify-items-center gap-10 p-10 lg:grid-cols-2"
+    >
+      <div class="flex flex-col">
+        <h1 class="text-5xl text-slate-800 lg:text-8xl">
+          Hello, <br /> I'm Maia
+        </h1>
+        <hr class="border-slate-600" />
+        <div class="flex w-full justify-start gap-5 py-5">
+          <a href="https://github.com/MaiaS" rel="icon">
+            <img src="github-mark.svg" class="h-10 w-10" /></a
+          >
+          <a
+            href="https://www.linkedin.com/in/maia-sason-8b25ba192/z"
+            rel="icon"
+          >
+            <img src="LI-In-Bug.png" class="h-10" />
+          </a>
+          <a href="resume.pdf" rel="icon" download="maia-sason-resume-2023">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg"
+              class="h-10"
+            />
+          </a>
+        </div>
+      </div>
+      <FeatureImage />
+    </section>
+  </main>
+
+  <Wave />
+</Layout>
+
+<!-- <ul role="list" class="link-card-grid">
+  <Card
+    href="https://docs.astro.build/"
+    title="Documentation"
+    body="Learn how Astro works and explore the official API docs."
+  />
+  <Card
+    href="https://astro.build/integrations/"
+    title="Integrations"
+    body="Supercharge your project with new frameworks and libraries."
+  />
+  <Card
+    href="https://astro.build/themes/"
+    title="Themes"
+    body="Explore a galaxy of community-built starter themes."
+  />
+  <Card
+    href="https://astro.build/chat/"
+    title="Community"
+    body="Come say hi to our amazing Discord community. ❤️"
+  />
+</ul> -->
+
+<style></style>
